@@ -46,16 +46,22 @@ namespace Shell_Handler
 
             archiveDirectory.Click += (sender, args) =>
             {
+                debugMessage();
+
                 runAppWithArgs("osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\"", fileList[0], fileList[0] + ".osz"));
             };
 
             archiveDirectoryToBeatmapFile.Click += (sender, args) =>
             {
+                debugMessage();
+
                 runAppWithArgs("osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\" --skipMenu", fileList[0], fileList[0] + ".osz"));
             };
 
             archiveDirectoryToSkinFile.Click += (sender, args) =>
             {
+                debugMessage();
+
                 runAppWithArgs("osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\" --skipMenu", fileList[0], fileList[0] + ".osk"));
             };
 
@@ -70,6 +76,11 @@ namespace Shell_Handler
         {
             ProcessStartInfo processStart = new ProcessStartInfo(app, args);
             Process.Start(processStart);
+        }
+
+        private static void debugMessage()
+        {
+            //MessageBox.Show("asdasdasdasdasd");
         }
     }
 }
