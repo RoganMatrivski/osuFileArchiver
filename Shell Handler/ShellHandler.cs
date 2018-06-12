@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
+using Microsoft.Win32;
+
 namespace Shell_Handler
 {
     [ComVisible(true)]
@@ -22,9 +24,13 @@ namespace Shell_Handler
             return true;
         }
 
+        public static string appPath = AppDomain.CurrentDomain.BaseDirectory;
+
         [STAThread]
         protected override ContextMenuStrip CreateMenu()
         {
+
+
             var menu = new ContextMenuStrip();
 
             var archiveDirectory = new ToolStripMenuItem
@@ -78,9 +84,37 @@ namespace Shell_Handler
             Process.Start(processStart);
         }
 
+        private static string getAppPath()
+        {
+            string path = "";
+            try
+            {
+                using (RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\Rogan Matrivski\\osu! File Archiver\\"))
+                {
+                    if (key != null)
+                    {
+                        Object o = key.GetValue("Path");
+                        if (o != null)
+                        {
+                            path = o.ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)  //just for demonstration...it's always best to handle specific exceptions
+            {
+                //react appropriately
+            }
+
+            return path;
+        }
+
         private static void debugMessage()
         {
             //MessageBox.Show("asdasdasdasdasd");
+            //MessageBox.Show(appPath);
+            //MessageBox.Show(getAppPath());
+
         }
     }
 }
