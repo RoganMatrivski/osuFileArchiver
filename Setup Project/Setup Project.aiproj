@@ -1,0 +1,45 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>283a1528-d936-454a-b41e-7686d83b2313</ProjectGuid>
+    <OutputType>msi</OutputType>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Setup Project.aip</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <AssemblyName>Setup Project</AssemblyName>
+    <Name>Setup Project</Name>
+    <RootNamespace>Setup Project</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' " />
+  <ItemGroup>
+    <Compile Include="Setup Project.aip">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\osuFileArchiver\osuFileArchiver.csproj">
+      <Name>osuFileArchiver</Name>
+      <Project>{59a8a00b-b298-4cc6-9214-e0365424d916}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;SymbolsOutput</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell Handler Tester\Shell Handler Tester.csproj">
+      <Name>Shell Handler Tester</Name>
+      <Project>{df4ee4da-3c32-4c1d-8b3f-812c9602ad83}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;References</OutputsToImport>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell Handler\Shell Handler.csproj">
+      <Name>Shell Handler</Name>
+      <Project>{f4d1a916-5331-4e26-a675-beac49da84b1}</Project>
+      <Private>True</Private>
+      <OutputsToImport>PrimaryOutput;References;ContentOutput</OutputsToImport>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Condition="'$(AdvancedInstallerMSBuildTargets)' != ''" Project="$(AdvancedInstallerMSBuildTargets)\AdvInstExtTasks.Targets" />
+  <Import Condition="'$(AdvancedInstallerMSBuildTargets)' == ''" Project="$(MSBuildExtensionsPath32)\Caphyon\Advanced Installer\AdvInstExtTasks.Targets" />
+</Project>

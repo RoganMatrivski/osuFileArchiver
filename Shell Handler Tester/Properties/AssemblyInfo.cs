@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Shell Handler")]
+[assembly: AssemblyTitle("Shell Handler Tester")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Shell Handler")]
-[assembly: AssemblyCopyright("Copyright © Rogan Matrivski 2018")]
+[assembly: AssemblyProduct("Shell Handler Tester")]
+[assembly: AssemblyCopyright("Copyright Â©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f4d1a916-5331-4e26-a675-beac49da84b1")]
+[assembly: Guid("df4ee4da-3c32-4c1d-8b3f-812c9602ad83")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,7 +32,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.23.23")]
-[assembly: AssemblyFileVersion("0.1.0.0")]
+[assembly: AssemblyVersion("1.0.9.9")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: AssemblyInformationalVersion("0.1.0-alpha-22")]
+[assembly: AssemblyInformationalVersion("1.0.0-alpha-08")]

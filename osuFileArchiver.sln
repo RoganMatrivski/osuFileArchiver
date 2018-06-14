@@ -7,20 +7,41 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osuFileArchiver", "osuFileA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell Handler", "Shell Handler\Shell Handler.csproj", "{F4D1A916-5331-4E26-A675-BEAC49DA84B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell Handler Tester", "Shell Handler Tester\Shell Handler Tester.csproj", "{DF4EE4DA-3C32-4C1D-8B3F-812C9602AD83}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Setup Project", "Setup Project\Setup Project.aiproj", "{283A1528-D936-454A-B41E-7686D83B2313}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{59A8A00B-B298-4CC6-9214-E0365424D916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{59A8A00B-B298-4CC6-9214-E0365424D916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A8A00B-B298-4CC6-9214-E0365424D916}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A8A00B-B298-4CC6-9214-E0365424D916}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
 		{59A8A00B-B298-4CC6-9214-E0365424D916}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59A8A00B-B298-4CC6-9214-E0365424D916}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F4D1A916-5331-4E26-A675-BEAC49DA84B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F4D1A916-5331-4E26-A675-BEAC49DA84B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D1A916-5331-4E26-A675-BEAC49DA84B1}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D1A916-5331-4E26-A675-BEAC49DA84B1}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
 		{F4D1A916-5331-4E26-A675-BEAC49DA84B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4D1A916-5331-4E26-A675-BEAC49DA84B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF4EE4DA-3C32-4C1D-8B3F-812C9602AD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4EE4DA-3C32-4C1D-8B3F-812C9602AD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4EE4DA-3C32-4C1D-8B3F-812C9602AD83}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4EE4DA-3C32-4C1D-8B3F-812C9602AD83}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{DF4EE4DA-3C32-4C1D-8B3F-812C9602AD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4EE4DA-3C32-4C1D-8B3F-812C9602AD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{283A1528-D936-454A-B41E-7686D83B2313}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{283A1528-D936-454A-B41E-7686D83B2313}.Debug|Any CPU.Build.0 = DefaultBuild
+		{283A1528-D936-454A-B41E-7686D83B2313}.DefaultBuild|Any CPU.ActiveCfg = DefaultBuild
+		{283A1528-D936-454A-B41E-7686D83B2313}.DefaultBuild|Any CPU.Build.0 = DefaultBuild
+		{283A1528-D936-454A-B41E-7686D83B2313}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{283A1528-D936-454A-B41E-7686D83B2313}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

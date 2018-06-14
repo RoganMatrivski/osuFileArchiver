@@ -54,21 +54,21 @@ namespace Shell_Handler
             {
                 debugMessage();
 
-                runAppWithArgs("osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\"", fileList[0], fileList[0] + ".osz"));
+                runAppWithArgs(getAppPath() + "osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\"", fileList[0], fileList[0] + ".osz"));
             };
 
             archiveDirectoryToBeatmapFile.Click += (sender, args) =>
             {
                 debugMessage();
 
-                runAppWithArgs("osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\" --skipMenu", fileList[0], fileList[0] + ".osz"));
+                runAppWithArgs(getAppPath() + "osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\" --skipMenu", fileList[0], fileList[0] + ".osz"));
             };
 
             archiveDirectoryToSkinFile.Click += (sender, args) =>
             {
                 debugMessage();
 
-                runAppWithArgs("osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\" --skipMenu", fileList[0], fileList[0] + ".osk"));
+                runAppWithArgs(getAppPath() + "osuFileArchiver.exe", String.Format("--directoryLocation \"{0}\" --saveLocation \"{1}\" --skipMenu", fileList[0], fileList[0] + ".osk"));
             };
 
             menu.Items.Add(archiveDirectory);
@@ -89,7 +89,19 @@ namespace Shell_Handler
             string path = "";
             try
             {
-                using (RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\Rogan Matrivski\\osu! File Archiver\\"))
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey("Software\\WOW6432Node\\osu! File Archiver\\"))
+                {
+                    if (key != null)
+                    {
+                        Object o = key.GetValue("Path");
+                        if (o != null)
+                        {
+                            path = o.ToString();
+                        }
+                    }
+                }
+
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey("Software\\osu! File Archiver\\"))
                 {
                     if (key != null)
                     {
@@ -111,10 +123,15 @@ namespace Shell_Handler
 
         private static void debugMessage()
         {
-            //MessageBox.Show("asdasdasdasdasd");
-            //MessageBox.Show(appPath);
-            //MessageBox.Show(getAppPath());
+            MessageBox.Show("asdasdasdasdasd");
+            MessageBox.Show(appPath);
+            MessageBox.Show(getAppPath());
 
+        }
+
+        public static void testFunctions()
+        {
+            debugMessage();
         }
     }
 }
