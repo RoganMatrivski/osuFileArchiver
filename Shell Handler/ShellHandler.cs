@@ -116,13 +116,10 @@ namespace Shell_Handler
             //MessageBox.Show(getAppPath());
 
         }
-<<<<<<< HEAD
 
         //public static void testFunctions()
         //{
         //    debugMessage();
         //}
-=======
->>>>>>> parent of 09bf233... Packaging for Setup
     }
 }
