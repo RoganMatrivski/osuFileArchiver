@@ -49,17 +49,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shell Handler\Shell Handler.csproj">
+    <ProjectReference Include="..\Shell Handler\ShellHandler.csproj">
       <Project>{f4d1a916-5331-4e26-a675-beac49da84b1}</Project>
-      <Name>Shell Handler</Name>
+      <Name>ShellHandler</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Shell Handler.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

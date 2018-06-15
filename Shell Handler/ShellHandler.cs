@@ -129,9 +129,9 @@ namespace Shell_Handler
 
         }
 
-        public static void testFunctions()
-        {
-            debugMessage();
-        }
+        //public static void testFunctions()
+        //{
+        //    debugMessage();
+        //}
     }
 }

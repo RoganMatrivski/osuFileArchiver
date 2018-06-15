@@ -33,11 +33,10 @@
       <Private>True</Private>
       <OutputsToImport>PrimaryOutput;References</OutputsToImport>
     </ProjectReference>
-    <ProjectReference Include="..\Shell Handler\Shell Handler.csproj">
-      <Name>Shell Handler</Name>
+    <ProjectReference Include="..\Shell Handler\ShellHandler.csproj">
+      <Name>ShellHandler</Name>
       <Project>{f4d1a916-5331-4e26-a675-beac49da84b1}</Project>
       <Private>True</Private>
-      <OutputsToImport>PrimaryOutput;References;ContentOutput</OutputsToImport>
     </ProjectReference>
   </ItemGroup>
   <Import Condition="'$(AdvancedInstallerMSBuildTargets)' != ''" Project="$(AdvancedInstallerMSBuildTargets)\AdvInstExtTasks.Targets" />
