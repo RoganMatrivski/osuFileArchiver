@@ -35,19 +35,22 @@ namespace Shell_Handler
 
             var archiveDirectory = new ToolStripMenuItem
             {
-                Text = "Pack this Directory"
+                Text = "Pack this Directory",
+                Image = Properties.Resources.osuIconFile
             };
 
             var fileList = SelectedItemPaths.ToList();
 
             var archiveDirectoryToBeatmapFile = new ToolStripMenuItem
             {
-                Text = "Pack this Directory to " + new DirectoryInfo(fileList[0]).Name + ".osz"
+                Text = "Pack this Directory to " + new DirectoryInfo(fileList[0]).Name + ".osz",
+                Image = Properties.Resources.osuIconFile
             };
 
             var archiveDirectoryToSkinFile = new ToolStripMenuItem
             {
-                Text = "Pack this Directory to " + new DirectoryInfo(fileList[0]).Name + ".osk"
+                Text = "Pack this Directory to " + new DirectoryInfo(fileList[0]).Name + ".osk",
+                Image = Properties.Resources.osuIconFile
             };
 
             archiveDirectory.Click += (sender, args) =>
